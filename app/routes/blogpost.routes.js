@@ -6,5 +6,8 @@ module.exports = app => {
   // Retrieve all blog posts
   router.get("/", blogposts.findAll);
 
+  // Create a new todo item
+  router.post("/", blogposts.create);
+
   app.use('/api/blogposts', router);
 };
